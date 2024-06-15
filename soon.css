@@ -1,0 +1,24 @@
+.para {
+    justify-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 83px;
+    margin-left: 30%;
+    background:linear-gradient(90deg, #ff6a, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+
+
+}
+
+body{
+    background-color: lightgray
+    ;
+}
+
+
+@media only screen {
+    .para{
+        font-size: 300%;
+    }
+}

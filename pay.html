@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+</head>
+<body>
+    <form>
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+    <button style="width: 87px; height: 57px; background-color: green; color: white; border: navy; margin-left: 35%; margin-top: 9%;" type="button" onclick="makePayment()">Pay Now</button>
+</form>
+<script>
+    function makePayment() {
+        FlutterwaveCheckout({
+          public_key: "100578340",
+          tx_ref: "titanic-48981487343MDI0NzMx",
+          amount: 546,
+          currency: "LRD",
+          payment_options: "card, mobilemoneyliberia, ussd",
+          redirect_url: "success.html",
+          meta: {
+            consumer_id: 23,
+            consumer_mac: "92a3-912ba-1192a",
+          },
+          customer: {
+            email: "choiceforkpah@gmail.com",
+            phone_number: "0881422030",
+            name: "Dream builder",
+          },
+          customizations: {
+            title: "Dream Builder",
+            description: "Payment for an awesome cruise",
+            logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
+          }
+        });
+      }
+</script>
+
+    
+</body>
+</html>
